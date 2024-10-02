@@ -33,7 +33,10 @@ header::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
     border-radius: 10px;
 }
 
@@ -43,8 +46,9 @@ header h1, header nav, header form {
 }
 
 header h1 {
-    color: #333;
+    color: #fff;
     margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 nav ul {
@@ -59,66 +63,29 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #fff;
     font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
 main {
     grid-column: 1 / 2;
-    background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
-    background-size: cover;
-    background-position: center;
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative;
-}
-
-main::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-}
-
-main > * {
-    position: relative;
-    z-index: 1;
 }
 
 aside {
     grid-column: 2 / 3;
-    background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
-    background-size: cover;
-    background-position: center;
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative;
-}
-
-aside::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-}
-
-aside > * {
-    position: relative;
-    z-index: 1;
 }
 
 .blog-post {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: #fff;
     border: 1px solid #ddd;
     padding: 1rem;
     margin-bottom: 1rem;
@@ -175,7 +142,7 @@ aside > * {
 }
 
 #about-brief {
-    background-color: rgba(249, 249, 249, 0.9);
+    background-color: #f9f9f9;
     padding: 1rem;
     border-radius: 5px;
     margin-top: 20px;
@@ -192,7 +159,6 @@ footer {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
-    color: #fff;
 }
 
 footer::before {
@@ -209,6 +175,7 @@ footer::before {
 footer p {
     position: relative;
     z-index: 1;
+    color: #fff;
 }
 
 #search-form {
@@ -237,7 +204,7 @@ footer p {
 }
 
 .post-content {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: #fff;
     padding: 2rem;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -250,55 +217,6 @@ footer p {
     border-radius: 5px;
 }
 
-#comments {
-    margin-top: 2rem;
-    background-color: rgba(249, 249, 249, 0.9);
-    padding: 1rem;
-    border-radius: 5px;
-}
-
-#comment-form textarea,
-#comment-form input[type="text"] {
-    width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 3px;
-}
-
-#comment-form button {
-    background-color: #3498db;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    border: none;
-    cursor: pointer;
-    border-radius: 3px;
-    transition: background-color 0.3s ease;
-}
-
-#comment-form button:hover {
-    background-color: #2980b9;
-}
-
-.comment {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 3px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.comment-author {
-    font-weight: bold;
-    color: #2c3e50;
-}
-
-.comment-date {
-    font-style: italic;
-    color: #666;
-    font-size: 0.9em;
-}
-
 @media (max-width: 768px) {
     body {
         grid-template-columns: 1fr;
@@ -307,4 +225,4 @@ footer p {
     main, aside {
         grid-column: 1 / -1;
     }
-    }
+}
